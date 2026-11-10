@@ -1605,6 +1605,22 @@ html:not(.js-ready) .product-tabpanel + .product-tabpanel {
   max-width: 72ch;
 }
 
+.footer-cert {
+  display: grid;
+  grid-template-columns: auto minmax(0, 42ch);
+  gap: var(--space-4);
+  align-items: center;
+  justify-content: start;
+  max-width: 100%;
+}
+
+.footer-cert-caption {
+  margin: 0;
+  font-size: var(--t-14);
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
 /* —— Breakpoints —— */
 @media (min-width: 768px) {
   .shell { width: min(100% - 3rem, var(--max)); }
