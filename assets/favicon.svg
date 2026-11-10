@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#0B1220"/>
+  <!-- single amber thread with node -->
+  <path d="M7 20 H13 L17 12 H24" fill="none" stroke="#F5A524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="12" r="2.4" fill="#F5A524"/>
+  <circle cx="7" cy="20" r="1.4" fill="#F5A524"/>
+</svg>

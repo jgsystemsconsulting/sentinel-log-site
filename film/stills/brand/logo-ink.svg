@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 13 164 164" width="156" height="156">
+  <!-- Background -->
+  
+
+  <!-- Circuit board monogram circle -->
+  <circle cx="100" cy="95" r="72" fill="none" stroke="#0a0a0b" stroke-width="4.8"/>
+
+  <!-- J letterform - vertical stroke with curve -->
+  <line x1="88" y1="58" x2="88" y2="108" stroke="#0a0a0b" stroke-width="5.7" stroke-linecap="round"/>
+  <path d="M88 108 Q88 122 76 122 Q64 122 64 112" fill="none" stroke="#0a0a0b" stroke-width="5.7" stroke-linecap="round"/>
+
+  <!-- G letterform -->
+  <path d="M112 68 Q98 58 90 75 Q84 88 90 102 Q98 116 112 110 L112 98 L104 98" fill="none" stroke="#0a0a0b" stroke-width="5.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Circuit trace dots on circle perimeter -->
+  <circle cx="100" cy="23" r="5" fill="#0a0a0b"/>
+  <circle cx="153" cy="48" r="5" fill="#0a0a0b"/>
+  <circle cx="172" cy="95" r="5" fill="#0a0a0b"/>
+  <circle cx="153" cy="142" r="5" fill="#0a0a0b"/>
+  <circle cx="100" cy="167" r="5" fill="#0a0a0b"/>
+  <circle cx="47" cy="142" r="5" fill="#0a0a0b"/>
+  <circle cx="28" cy="95" r="5" fill="#0a0a0b"/>
+  <circle cx="47" cy="48" r="5" fill="#0a0a0b"/>
+
+  <!-- Short traces from dots -->
+  <line x1="100" y1="23" x2="100" y2="35" stroke="#0a0a0b" stroke-width="2.8"/>
+  <line x1="172" y1="95" x2="160" y2="95" stroke="#0a0a0b" stroke-width="2.8"/>
+  <line x1="28" y1="95" x2="40" y2="95" stroke="#0a0a0b" stroke-width="2.8"/>
+  <line x1="100" y1="167" x2="100" y2="155" stroke="#0a0a0b" stroke-width="2.8"/>
+
+  
+</svg>

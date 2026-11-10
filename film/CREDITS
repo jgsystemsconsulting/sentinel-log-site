@@ -1,0 +1,22 @@
+# Third-party assets — Sentinel Log film
+
+## Type
+- Inter, Inter Tight — Google Fonts / Rasmus Andersson — OFL-1.1 (fonts/OFL-inter.txt)
+- JetBrains Mono — JetBrains — OFL-1.1 (fonts/OFL-jetbrainsmono.txt)
+
+## Voice
+- Kokoro ONNX v1.0 — kokoro-onnx / hexgrad Kokoro — Apache-2.0
+- Voice: bm_george (British English)
+
+## Engine / toolbox
+- Drawing engine adapted from lemo-opuscar style `dark-keynote` (library code; film content original)
+- Render / TTS / mux tools: lemo-opuscar `core/`
+
+## Music (later)
+- Sample libraries per dark-keynote palette (e.g. VCSL CC0) — listed when score lands
+
+## Product
+- Sentinel Log — JG Systems Consulting — Apache-2.0
+
+## Music
+- VCSL marimba / vibraphone_bowed samples (CC0) via lemo-opuscar sampler

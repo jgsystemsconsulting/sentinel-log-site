@@ -1,0 +1,62 @@
+[
+  {
+    "id": "L01",
+    "text": "Hazard records live in spreadsheets, shared drives and email threads.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L02",
+    "text": "The golden thread is lost.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L03",
+    "text": "One system holds every hazard in place.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L04",
+    "text": "Cause. Consequence. Control. Evidence. Residual risk. Linked end to end.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L05",
+    "text": "A living register with an audit trail, baselines and configurable risk matrices.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L06",
+    "text": "Senior leaders see the whole programme on a single page.",
+    "asr": "Senior leaders see the whole program on a single page.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  },
+  {
+    "id": "L07",
+    "text": "Self-hosted. Open source. On-prem or air-gapped. No lock-in.",
+    "asr": "Self-hosted. Open source. On-prem or air-gapped. No lock-in.",
+    "sub": "Self-hosted. Open source. On-prem or air-gapped. No lock-in.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb",
+    "phonemes": true
+  },
+  {
+    "id": "L08",
+    "text": "Sentinel Log. Every hazard. Every control. Every piece of evidence. One golden thread.",
+    "voice": "bm_george",
+    "speed": 0.90,
+    "lang": "en-gb"
+  }
+]

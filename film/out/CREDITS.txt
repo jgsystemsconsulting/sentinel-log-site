@@ -1,0 +1,20 @@
+Sentinel Log film — third-party attributions
+============================================
+
+Type
+----
+- Inter, Inter Tight — Google Fonts / Rasmus Andersson — SIL Open Font License 1.1
+- JetBrains Mono — JetBrains — SIL Open Font License 1.1
+
+Voice
+-----
+- Kokoro ONNX v1.0 — kokoro-onnx / hexgrad Kokoro — Apache License 2.0
+- Voice: bm_george (British English)
+
+Music
+-----
+- VCSL marimba / vibraphone_bowed samples — CC0
+
+Product
+-------
+- Sentinel Log — JG Systems Consulting Ltd — Apache License 2.0

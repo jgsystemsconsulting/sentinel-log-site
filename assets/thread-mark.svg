@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 24" width="72" height="24" role="img" aria-label="Sentinel thread mark">
+  <!-- thin amber thread through nodes -->
+  <polyline points="2,17 16,17 22,9 40,9 46,15 70,15" fill="none" stroke="#F5A524" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nodes: solid at ends, hollow at bends -->
+  <circle cx="2" cy="17" r="2.2" fill="#F5A524"/>
+  <circle cx="22" cy="9" r="2" fill="none" stroke="#F5A524" stroke-width="1.2"/>
+  <circle cx="40" cy="9" r="2" fill="none" stroke="#F5A524" stroke-width="1.2"/>
+  <circle cx="46" cy="15" r="2" fill="none" stroke="#F5A524" stroke-width="1.2"/>
+  <circle cx="70" cy="15" r="2.2" fill="#F5A524"/>
+</svg>

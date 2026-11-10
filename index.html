@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sentinel Log: hazard log and safety traceability</title>
+  <meta name="description" content="Self-hosted hazard log. Every hazard, control and piece of evidence on one golden thread.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://jgsystemsconsulting.github.io/sentinel-log-site/">
+  <meta property="og:title" content="Sentinel Log: hazard log and safety traceability">
+  <meta property="og:description" content="Self-hosted hazard log. Every hazard, control and piece of evidence on one golden thread.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jgsystemsconsulting.github.io/sentinel-log-site/">
+  <meta property="og:image" content="https://jgsystemsconsulting.github.io/sentinel-log-site/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sentinel Log: hazard log and safety traceability">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sentinel Log: hazard log and safety traceability">
+  <meta name="twitter:description" content="Self-hosted hazard log. Every hazard, control and piece of evidence on one golden thread.">
+  <meta name="twitter:image" content="https://jgsystemsconsulting.github.io/sentinel-log-site/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#main" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        hidden
+      >
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#why-sentinel">Why Sentinel</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Self-hosted hazard log</p>
+          <h1 id="hero-title"><span class="h1-line">Every hazard. Every control.</span> <span class="h1-line">Every piece of evidence.</span> <span class="h1-line h1-gold">One golden thread.</span></h1>
+          <p class="hero-sub">One open, auditable, self-hosted place for the argument that each hazard is controlled.</p>
+          <p class="hero-audience">For fusion, nuclear and defence programmes, on-prem or air-gapped.</p>
+          <p class="hero-honesty">Under active development. Screens show illustrative data.</p>
+          <p class="hero-cta">
+            <a class="btn btn-primary" href="#product">See the product</a>
+            <a class="btn btn-secondary" href="#hero-film" id="watch-film">Video</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <div class="film-device" id="hero-film">
+            <div class="film-glow" aria-hidden="true"></div>
+            <div class="film-slot">
+              <video controls playsinline preload="none" poster="film/out/poster.jpg" id="hero-video">
+                <source src="film/out/sentinel-log.webm" type="video/webm">
+                <source src="film/out/sentinel-log.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview" aria-labelledby="overview-title">
+      <div class="shell section-split">
+        <header class="section-head">
+          <h2 id="overview-title">Overview</h2>
+        </header>
+        <div class="section-body">
+          <p class="body-lg">Hazard records live in spreadsheets, shared drives and email threads. The golden thread is lost. Sentinel Log holds every hazard in one living register and links hazard, cause, consequence, control, evidence and residual risk end to end. An audit trail and end-to-end traceability stay with the record. It supports general hazard identification, design risk assessment, HAZOP and FMEA/FMECA.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="shell">
+        <div class="section-split section-split-tight">
+          <header class="section-head">
+            <h2 id="how-title">How it works</h2>
+          </header>
+          <div class="section-body">
+            <p class="lead">Hazard. Cause. Consequence. Control. Evidence. Residual risk. Linked end to end.</p>
+          </div>
+        </div>
+
+        <div class="thread-stage" role="group" aria-label="Golden thread">
+          <ol class="golden-thread">
+            <li class="gt-node" data-node="hazard"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Hazard</span></li>
+            <li class="gt-node" data-node="cause"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Cause</span></li>
+            <li class="gt-node" data-node="consequence"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Consequence</span></li>
+            <li class="gt-node" data-node="control"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Control</span></li>
+            <li class="gt-node" data-node="evidence"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Evidence</span></li>
+            <li class="gt-node" data-node="residual"><span class="gt-dot" aria-hidden="true"></span><span class="gt-label">Residual risk</span></li>
+          </ol>
+        </div>
+
+        <p class="body-lg thread-foot">A living register with an audit trail, baselines and configurable risk matrices. Traceability is a first-class view, not an export afterthought.</p>
+      </div>
+    </section>
+
+    <section class="section" id="product" aria-labelledby="product-title">
+      <div class="shell">
+        <div class="section-split section-split-tight">
+          <header class="section-head">
+            <h2 id="product-title">Inside Sentinel Log</h2>
+          </header>
+          <div class="section-body">
+            <p class="lead">Eight views of the living hazard record.</p>
+          </div>
+        </div>
+
+        <div class="product-tour" data-product-tour>
+          <div class="product-tablist-wrap" data-tablist-wrap>
+            <button type="button" class="tab-scroll tab-scroll-prev" data-tab-scroll="-1" aria-label="Scroll product tabs left" hidden>
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div class="product-tablist-scroller" data-tablist-scroller>
+              <div class="product-tablist" role="tablist" aria-label="Product screens">
+              <button type="button" class="product-tab" role="tab" id="tab-register" aria-controls="panel-register" aria-selected="true" tabindex="0">Register</button>
+              <button type="button" class="product-tab" role="tab" id="tab-hazard" aria-controls="panel-hazard" aria-selected="false" tabindex="-1">Hazard record</button>
+              <button type="button" class="product-tab" role="tab" id="tab-risk" aria-controls="panel-risk" aria-selected="false" tabindex="-1">Risk</button>
+              <button type="button" class="product-tab" role="tab" id="tab-controls" aria-controls="panel-controls" aria-selected="false" tabindex="-1">Controls, evidence and actions</button>
+              <button type="button" class="product-tab" role="tab" id="tab-trace" aria-controls="panel-trace" aria-selected="false" tabindex="-1">Traceability and baselines</button>
+              <button type="button" class="product-tab" role="tab" id="tab-reviews" aria-controls="panel-reviews" aria-selected="false" tabindex="-1">Reviews and history</button>
+              <button type="button" class="product-tab" role="tab" id="tab-summary" aria-controls="panel-summary" aria-selected="false" tabindex="-1">Management summary</button>
+              <button type="button" class="product-tab" role="tab" id="tab-import" aria-controls="panel-import" aria-selected="false" tabindex="-1">Import and export</button>
+              </div>
+            </div>
+            <button type="button" class="tab-scroll tab-scroll-next" data-tab-scroll="1" aria-label="Scroll product tabs right">
+              <span aria-hidden="true">›</span>
+            </button>
+            <p class="tab-scroll-hint" data-tab-hint hidden>Swipe for more</p>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-register" aria-labelledby="tab-register" data-tab-panel>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / register</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge register screen">
+                      <span class="screen-stage">
+                        <img
+                        class="screen-img"
+                        src="assets/screens/register-1080.webp" srcset="assets/screens/register-1080.webp 1080w, assets/screens/register.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Hazard register table with search, filters, residual risk grouping and open hazards"
+                        width="2160"
+                        height="1613"
+                        data-full-src="assets/screens/register.webp"
+                        data-full-alt="Hazard register table with search, filters, residual risk grouping and open hazards"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:2.5%;--y:21.5%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:4.0%;--y:32.8%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:69.5%;--y:16.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Register</h3>
+                <ul class="product-bullets">
+                  <li>Find and open hazards from one living register.</li>
+                  <li>Search by ID, title, description and tags; filter, group and sort the current view.</li>
+                  <li>See residual risk grouping with counts on each group.</li>
+                  <li>Create a hazard, or import and export the current view.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Search, filter, group and sort</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Residual risk groups in the table</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> New, import and export actions</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-hazard" aria-labelledby="tab-hazard" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / hazard</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge hazard overview screen">
+                      <span class="screen-stage" data-screen-stage>
+                        <img
+                        class="screen-img"
+                        src="assets/screens/hazard-overview-1080.webp" srcset="assets/screens/hazard-overview-1080.webp 1080w, assets/screens/hazard-overview.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Hazard overview with risk summary, needs-attention list and record tabs"
+                        width="2160"
+                        height="1827"
+                        loading="lazy"
+                        data-full-src="assets/screens/hazard-overview.webp"
+                        data-full-alt="Hazard overview with risk summary, needs-attention list and record tabs"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:1.5%;--y:22.0%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:71.0%;--y:30.0%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:71.0%;--y:64.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-thumbs" role="group" aria-label="Hazard record screens">
+                  <button type="button" class="screen-thumb is-active" data-screen-switch data-src="assets/screens/hazard-overview.webp" data-alt="Hazard overview with risk summary, needs-attention list and record tabs" data-w="2160" data-h="1827" aria-pressed="true">
+                    <img src="assets/screens/hazard-overview-1080.webp" alt="" width="2160" height="1827" loading="lazy">
+                    <span>Overview</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/hazard-causes.webp" data-alt="Hazard causes and consequences linked to the record" data-w="2160" data-h="1040" aria-pressed="false">
+                    <img src="assets/screens/hazard-causes-1080.webp" alt="" width="2160" height="1040" loading="lazy">
+                    <span>Causes</span>
+                  </button>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Hazard record</h3>
+                <ul class="product-bullets">
+                  <li>Open a hazard as a tabbed record: overview, causes, risk, controls, relationships, reviews and history.</li>
+                  <li>Read initial and residual risk above the fold with a needs-attention list.</li>
+                  <li>Link causes and consequences on their own tab without losing the record context.</li>
+                  <li>Each tab has its own address so you can bookmark and share a deep link.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Record tabs with counts</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Risk summary on overview</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Needs-attention list</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-risk" aria-labelledby="tab-risk" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / risk</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge risk screen">
+                      <span class="screen-stage">
+                        <img
+                        class="screen-img"
+                        src="assets/screens/hazard-risk-1080.webp" srcset="assets/screens/hazard-risk-1080.webp 1080w, assets/screens/hazard-risk.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Hazard risk tab with assessment scales and a five-by-five risk matrix"
+                        width="2160"
+                        height="1604"
+                        loading="lazy"
+                        data-full-src="assets/screens/hazard-risk.webp"
+                        data-full-alt="Hazard risk tab with assessment scales and a five-by-five risk matrix"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:2.5%;--y:36.5%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:2.5%;--y:72.0%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:50.5%;--y:29.0%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Risk</h3>
+                <ul class="product-bullets">
+                  <li>Assess risk against your configured criteria version, not bare numbers alone.</li>
+                  <li>Read a five-by-five matrix with a score in every cell.</li>
+                  <li>Mark initial and residual cells in words as well as colour.</li>
+                  <li>Watch the result panel update as you choose severity and likelihood.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Severity and likelihood scales</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Five-by-five matrix with scores</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Initial and residual result</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-controls" aria-labelledby="tab-controls" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / control</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge control detail screen">
+                      <span class="screen-stage" data-screen-stage>
+                        <img
+                        class="screen-img"
+                        src="assets/screens/control-detail-1080.webp" srcset="assets/screens/control-detail-1080.webp 1080w, assets/screens/control-detail.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Control detail record with hierarchy of controls and linked evidence"
+                        width="2160"
+                        height="1298"
+                        loading="lazy"
+                        data-full-src="assets/screens/control-detail.webp"
+                        data-full-alt="Control detail record with hierarchy of controls and linked evidence"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:1.5%;--y:18.5%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:71.5%;--y:66.0%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:2.5%;--y:50.0%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-thumbs" role="group" aria-label="Control, evidence and action screens">
+                  <button type="button" class="screen-thumb is-active" data-screen-switch data-src="assets/screens/control-detail.webp" data-alt="Control detail record with hierarchy of controls and linked evidence" data-w="2160" data-h="1298" aria-pressed="true">
+                    <img src="assets/screens/control-detail-1080.webp" alt="" width="2160" height="1298" loading="lazy">
+                    <span>Control</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/evidence-detail.webp" data-alt="Evidence detail with references supporting a control" data-w="2160" data-h="966" aria-pressed="false">
+                    <img src="assets/screens/evidence-detail-1080.webp" alt="" width="2160" height="966" loading="lazy">
+                    <span>Evidence</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/action-list.webp" data-alt="Action list with search, filters and overdue markers" data-w="2160" data-h="945" aria-pressed="false">
+                    <img src="assets/screens/action-list-1080.webp" alt="" width="2160" height="945" loading="lazy">
+                    <span>Actions</span>
+                  </button>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Controls, evidence and actions</h3>
+                <ul class="product-bullets">
+                  <li>Record controls with hierarchy of controls detail and links back to the hazard.</li>
+                  <li>Attach evidence references that support each control.</li>
+                  <li>Raise and track actions from the register pattern: search, filters and a real table.</li>
+                  <li>See overdue items with an icon and text, and owners called out when missing.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Control identity and status</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Linked evidence and actions</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Hierarchy and effectiveness fields</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-trace" aria-labelledby="tab-trace" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / traceability</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge traceability screen">
+                      <span class="screen-stage" data-screen-stage>
+                        <img
+                        class="screen-img"
+                        src="assets/screens/traceability-1080.webp" srcset="assets/screens/traceability-1080.webp 1080w, assets/screens/traceability.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Traceability view with cause, hazard, consequence, control and evidence columns plus baselines"
+                        width="2160"
+                        height="1188"
+                        loading="lazy"
+                        data-full-src="assets/screens/traceability.webp"
+                        data-full-alt="Traceability view with cause, hazard, consequence, control and evidence columns plus baselines"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:2.5%;--y:34.5%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:74.0%;--y:30.3%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:74.0%;--y:65.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-thumbs" role="group" aria-label="Traceability and baseline screens">
+                  <button type="button" class="screen-thumb is-active" data-screen-switch data-src="assets/screens/traceability.webp" data-alt="Traceability view with cause, hazard, consequence, control and evidence columns plus baselines" data-w="2160" data-h="1188" aria-pressed="true">
+                    <img src="assets/screens/traceability-1080.webp" alt="" width="2160" height="1188" loading="lazy">
+                    <span>Traceability</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/baseline-dialog.webp" data-alt="Create baseline dialog with name, counts and acknowledgement" data-w="2160" data-h="1140" aria-pressed="false">
+                    <img src="assets/screens/baseline-dialog-1080.webp" alt="" width="2160" height="1140" loading="lazy">
+                    <span>Baseline</span>
+                  </button>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Traceability and baselines</h3>
+                <ul class="product-bullets">
+                  <li>Read the golden thread left to right: causes, hazard, consequences, controls, evidence and actions.</li>
+                  <li>Judge coverage from relationship metrics beside the diagram.</li>
+                  <li>Create an immutable baseline with a unique name and explicit acknowledgement.</li>
+                  <li>Switch to a table view of the same links when you need a linear list.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Lineage columns around the hazard</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Relationship metrics</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Baseline list and create action</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-reviews" aria-labelledby="tab-reviews" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / reviews</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge reviews screen">
+                      <span class="screen-stage" data-screen-stage>
+                        <img
+                        class="screen-img"
+                        src="assets/screens/reviews-1080.webp" srcset="assets/screens/reviews-1080.webp 1080w, assets/screens/reviews.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Reviews and comments on a hazard record"
+                        width="2160"
+                        height="1190"
+                        loading="lazy"
+                        data-full-src="assets/screens/reviews.webp"
+                        data-full-alt="Reviews and comments on a hazard record"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:61.5%;--y:39.0%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:5.0%;--y:64.5%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:68.0%;--y:29.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-thumbs" role="group" aria-label="Reviews and history screens">
+                  <button type="button" class="screen-thumb is-active" data-screen-switch data-src="assets/screens/reviews.webp" data-alt="Reviews and comments on a hazard record" data-w="2160" data-h="1190" aria-pressed="true">
+                    <img src="assets/screens/reviews-1080.webp" alt="" width="2160" height="1190" loading="lazy">
+                    <span>Reviews</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/history.webp" data-alt="Change history on every record for a hazard" data-w="2160" data-h="849" aria-pressed="false">
+                    <img src="assets/screens/history-1080.webp" alt="" width="2160" height="849" loading="lazy">
+                    <span>History</span>
+                  </button>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Reviews and history</h3>
+                <ul class="product-bullets">
+                  <li>Capture comments, reviews and approvals on the record.</li>
+                  <li>Read the change history on every record over time.</li>
+                  <li>Keep review outcomes with the hazard rather than in a side channel.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Review and comment thread</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Approval and status entries</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> History of field-level changes</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / summary</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge management summary screen">
+                      <span class="screen-stage">
+                        <img
+                        class="screen-img"
+                        src="assets/screens/summary-1080.webp" srcset="assets/screens/summary-1080.webp 1080w, assets/screens/summary.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Management summary dashboard with headline figures and ordered panels"
+                        width="2160"
+                        height="1389"
+                        loading="lazy"
+                        data-full-src="assets/screens/summary.webp"
+                        data-full-alt="Management summary dashboard with headline figures and ordered panels"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:2.5%;--y:28.0%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:2.5%;--y:42.0%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:84.0%;--y:19.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Management summary</h3>
+                <ul class="product-bullets">
+                  <li>See where the register stands in one management view.</li>
+                  <li>Read top hazards, residual distribution, control and evidence coverage, and open actions.</li>
+                  <li>Reorder panels with up and down controls, not drag alone.</li>
+                  <li>Print a single-page summary with marking, filters and data-as-at time stamped on the page.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Headline figures</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Ordered summary panels</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Print the summary</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-tabpanel" role="tabpanel" id="panel-import" aria-labelledby="tab-import" data-tab-panel hidden>
+            <div class="product-stage">
+              <div class="product-visual">
+                <div class="browser-frame">
+                  <div class="browser-chrome" aria-hidden="true">
+                    <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                    <span class="browser-url">sentinel-log / import</span>
+                  </div>
+                  <div class="screen-stage-wrap">
+                    <button type="button" class="screen-open" data-screen-open aria-label="Enlarge import preview screen">
+                      <span class="screen-stage" data-screen-stage>
+                        <img
+                        class="screen-img"
+                        src="assets/screens/import-preview-1080.webp" srcset="assets/screens/import-preview-1080.webp 1080w, assets/screens/import-preview.webp 2160w" sizes="(min-width: 960px) min(58vw, 720px), 92vw"
+                        alt="Import preview with dry-run counts, provenance columns and commit gate"
+                        width="2160"
+                        height="1335"
+                        loading="lazy"
+                        data-full-src="assets/screens/import-preview.webp"
+                        data-full-alt="Import preview with dry-run counts, provenance columns and commit gate"
+                      >
+                      </span>
+                    </button>
+                    <div class="hotspot-layer" aria-hidden="true">
+                      <span class="hotspot" style="--x:2.0%;--y:31.0%" data-hotspot="1" aria-hidden="true"><span class="hotspot-dot">1</span></span>
+                      <span class="hotspot" style="--x:64.5%;--y:47.8%" data-hotspot="2" aria-hidden="true"><span class="hotspot-dot">2</span></span>
+                      <span class="hotspot" style="--x:76.0%;--y:89.5%" data-hotspot="3" aria-hidden="true"><span class="hotspot-dot">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-thumbs" role="group" aria-label="Import and export screens">
+                  <button type="button" class="screen-thumb is-active" data-screen-switch data-src="assets/screens/import-preview.webp" data-alt="Import preview with dry-run counts, provenance columns and commit gate" data-w="2160" data-h="1335" aria-pressed="true">
+                    <img src="assets/screens/import-preview-1080.webp" alt="" width="2160" height="1335" loading="lazy">
+                    <span>Import</span>
+                  </button>
+                  <button type="button" class="screen-thumb" data-screen-switch data-src="assets/screens/export.webp" data-alt="Export options for format, scope and live or baseline data" data-w="2160" data-h="1145" aria-pressed="false">
+                    <img src="assets/screens/export-1080.webp" alt="" width="2160" height="1145" loading="lazy">
+                    <span>Export</span>
+                  </button>
+                </div>
+                <p class="illus-caption">Illustrative data</p>
+              </div>
+              <div class="product-copy">
+                <h3 class="product-panel-title">Import and export</h3>
+                <ul class="product-bullets">
+                  <li>Import hazards, controls, evidence or actions from xlsx, CSV or text-layer PDF tables.</li>
+                  <li>Map columns with samples, run a dry run, and commit only when errors are clear.</li>
+                  <li>Keep provenance on every imported row: file, sheet, row and import ID.</li>
+                  <li>Export the full dataset, current view or a baseline to xlsx, CSV or JSON with stable IDs.</li>
+                </ul>
+                <ol class="hotspot-legend">
+                  <li><span class="hotspot-num" aria-hidden="true">1</span> Dry-run outcome counts</li>
+                  <li><span class="hotspot-num" aria-hidden="true">2</span> Provenance on each row</li>
+                  <li><span class="hotspot-num" aria-hidden="true">3</span> Commit gate while errors remain</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dialog class="screen-dialog" id="screen-dialog" aria-label="Full size product screen">
+        <form method="dialog" class="screen-dialog-bar">
+          <button type="submit" class="screen-dialog-close" value="close">Close</button>
+        </form>
+        <div class="screen-dialog-body">
+          <img id="screen-dialog-img" src="assets/thread-mark.svg" alt="" width="2160" height="1200">
+        </div>
+      </dialog>
+    </section>
+
+    <section class="section" id="why-sentinel" aria-labelledby="why-title">
+      <div class="shell">
+        <header class="section-head section-head-solo">
+          <h2 id="why-title">Why Sentinel</h2>
+        </header>
+
+        <div class="why-clusters">
+          <article class="why-cluster">
+            <h3>Built for high-hazard programmes</h3>
+            <div class="why-cluster-body">
+              <p>Built for high-hazard programmes in fusion, nuclear and defence. Run on your own infrastructure, on-prem or air-gapped.</p>
+              <p>An audit trail and immutable baselines keep the record defensible. You configure the product as data rather than forking the code.</p>
+              <p>Open formats and stable IDs mean no lock-in. Designed for a long life: a 20-year support horizon.</p>
+            </div>
+          </article>
+          <article class="why-cluster">
+            <h3>Open by design</h3>
+            <div class="why-cluster-body">
+              <p>Licensed Apache-2.0. Releases are designed to ship with a CycloneDX SBOM. Stack: Python, Django and PostgreSQL, delivered with Docker or Podman Compose on Rocky, RHEL-compatible Linux or Ubuntu.</p>
+              <p>Designed to OWASP ASVS Level 2 and WCAG 2.2 AA, verified on each release. Designed for offline, air-gapped installation.</p>
+              <p>Import and export Excel, CSV and JSON with stable IDs so you keep your data.</p>
+            </div>
+          </article>
+        </div>
+
+        <ul class="trust-strip" aria-label="Design facts">
+          <li>Apache-2.0</li>
+          <li>CycloneDX SBOM</li>
+          <li>On-prem</li>
+          <li>Air-gapped</li>
+          <li>Import/Export</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="coming-next" aria-labelledby="coming-title">
+      <div class="shell">
+        <div class="coming-card">
+          <div class="coming-head">
+            <span class="coming-badge">Coming next</span>
+            <h2 id="coming-title">AI-assisted drafting</h2>
+          </div>
+          <p class="body-lg coming-intro">An optional drafting assistant. When enabled, adapters follow your allowlist: local open-weight models and/or an enterprise service you permit.</p>
+          <ul class="coming-principles">
+            <li>
+              <span class="principle-tick" aria-hidden="true"></span>
+              <span>Off by default</span>
+            </li>
+            <li>
+              <span class="principle-tick" aria-hidden="true"></span>
+              <span>A human approves every draft before it is saved</span>
+            </li>
+            <li>
+              <span class="principle-tick" aria-hidden="true"></span>
+              <span>AI never sets risk scores, rankings or review outcomes</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="shell faq-layout">
+        <header class="section-head faq-intro">
+          <h2 id="faq-title">FAQ</h2>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary>Who owns the data?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>You do. The product runs under your control. Full export to xlsx, CSV and JSON with stable IDs keeps your records portable.</p>
+          </details>
+          <details>
+            <summary>Where does it run?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>On your infrastructure: Docker or Podman Compose with PostgreSQL, on Rocky, RHEL-compatible Linux or Ubuntu.</p>
+          </details>
+          <details>
+            <summary>Can it work offline?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Yes. Designed for offline, air-gapped installation on isolated networks.</p>
+          </details>
+          <details>
+            <summary>How do we get data in and out?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Import hazards, controls, evidence and actions from Excel or CSV; export the full dataset to xlsx, CSV and JSON; re-import your own JSON into an empty instance.</p>
+          </details>
+          <details>
+            <summary>Can we tailor risk matrices and workflows?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Yes. Risk criteria, status labels, reference lists and related configuration are held as data and admin-managed after handover. You configure the product rather than fork it.</p>
+          </details>
+          <details>
+            <summary>What happens if we stop working with you?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>You keep the software under Apache-2.0, your data in open formats, and a customer-operated install you already control. No lock-in.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="about-main">
+          <header class="about-head">
+            <p class="about-kicker">Who we are</p>
+            <h2 id="about-title">About JG Systems Consulting</h2>
+          </header>
+          <div class="about-logo-chip">
+            <img src="assets/assets-logo-ink.svg" alt="JG Systems Consulting" width="180" height="48">
+          </div>
+          <p class="body-lg about-lead">JG Systems Consulting Ltd is a systems engineering consultancy that builds software tools for engineering teams. We are engineers who build the tools we use: grounded in Model-Based Systems Engineering and systems architecture, open by default, and designed to run on your own infrastructure.</p>
+          <div class="about-block">
+            <h3 class="about-subhead">What we do</h3>
+            <ul class="about-list">
+              <li>Software tools for engineering and safety teams</li>
+              <li>Model-Based Systems Engineering (MBSE)</li>
+              <li>Systems and enterprise architecture</li>
+              <li>SysML v1 and v2 modelling practice</li>
+              <li>AI integrated into engineering workflows</li>
+            </ul>
+          </div>
+          <p class="about-sectors"><span class="about-subhead">Sectors</span> Aerospace (civil and military), defence (land, naval, weapons), space and launchers, and C4I.</p>
+        </div>
+        <div class="about-aside">
+          <div class="about-block">
+            <h3 class="about-subhead" id="about-standards-title">We work to</h3>
+            <ul class="about-standards" aria-labelledby="about-standards-title">
+              <li>ISO/IEC/IEEE 15288</li>
+              <li>ISO/IEC/IEEE 42010</li>
+              <li>ISO/IEC/IEEE 29148</li>
+              <li>INCOSE SE Handbook</li>
+              <li>ARP4754A</li>
+            </ul>
+          </div>
+          <dl class="about-facts">
+            <div><dt>Registered</dt><dd>England and Wales</dd></div>
+            <div><dt>Company no.</dt><dd>11910666</dd></div>
+            <div><dt>Established</dt><dd>2019</dd></div>
+            <div><dt>Based</dt><dd>Leeds, UK</dd></div>
+          </dl>
+          <ul class="about-links">
+            <li>
+              <a
+                href="https://www.jgsystemsconsulting.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="jgsystemsconsulting.com (opens in a new tab)"
+              >jgsystemsconsulting.com<span class="ext-affordance" aria-hidden="true"></span></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/jg-systems-consulting-ltd/"
+                target="_blank"
+                rel="noopener"
+                aria-label="JG Systems Consulting on LinkedIn (opens in a new tab)"
+              >LinkedIn<span class="ext-affordance" aria-hidden="true"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Closing call to action">
+      <div class="shell closing-inner">
+        <img class="closing-mark" src="assets/thread-mark.svg" alt="" width="96" height="32">
+        <p class="closing-brand brand-wordmark">Sentinel Log</p>
+        <h2 id="closing-title" class="closing-line">Every hazard. Every control. Every piece of evidence. One golden thread.</h2>
+        <p class="closing-by">by JG Systems Consulting</p>
+        <p class="closing-cta hero-cta">
+          <a class="btn btn-primary" href="#product">See the product</a>
+          <a class="btn btn-secondary" href="#hero-film" id="watch-film-closing">Video</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <h2 id="contact-title" class="contact-title">Get in touch</h2>
+        <p class="contact-lede body-lg">Questions about Sentinel Log, a deployment for your team, or a hazard-log practice you want to talk through? Email us and we will pick it up from there.</p>
+        <p class="contact-cta hero-cta">
+          <a class="btn btn-primary" href="mailto:support@jgsystemsconsulting.com?subject=Sentinel%20Log%20enquiry">Email support@jgsystemsconsulting.com</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/company/jg-systems-consulting-ltd/" target="_blank" rel="noopener" aria-label="JG Systems Consulting on LinkedIn (opens in a new tab)">LinkedIn<span class="ext-affordance" aria-hidden="true"></span></a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-brand-row">
+            <img class="footer-mark" src="assets/thread-mark.svg" alt="" width="72" height="24">
+            <p class="footer-wordmark brand-wordmark">Sentinel Log</p>
+          </div>
+          <p class="footer-tagline">Every hazard. Every control. Every piece of evidence. One golden thread.</p>
+        </div>
+        <div class="footer-col footer-company">
+          <p class="footer-col-title">JG Systems Consulting Ltd</p>
+          <p>Company no. 11910666</p>
+          <p>Leeds, United Kingdom</p>
+          <ul class="footer-list">
+            <li>
+              <a
+                href="https://www.jgsystemsconsulting.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Company website (opens in a new tab)"
+              >jgsystemsconsulting.com<span class="ext-affordance" aria-hidden="true"></span></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/jg-systems-consulting-ltd/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Company LinkedIn (opens in a new tab)"
+              >LinkedIn<span class="ext-affordance" aria-hidden="true"></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col footer-product">
+          <p class="footer-col-title">Product</p>
+          <ul class="footer-list">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#why-sentinel">Why Sentinel</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="LICENSE">Apache License 2.0</a></li>
+            <li><a href="film/out/CREDITS.txt">Film credits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 JG Systems Consulting Ltd. Sentinel Log is open source under the Apache License 2.0.</p>
+        <p>Sentinel Log is a record-keeping and decision-support tool. It is not a qualified safety-critical tool; users remain responsible for all safety judgements.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

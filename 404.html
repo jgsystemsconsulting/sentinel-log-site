@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Sentinel Log</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/sentinel-log-site/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/sentinel-log-site/styles.css">
+  <style>
+    .not-found {
+      min-height: calc(100dvh - 12rem);
+      display: flex;
+      align-items: center;
+      padding-block: var(--space-8);
+    }
+    .not-found-inner {
+      max-width: 36rem;
+    }
+    .not-found-code {
+      margin: 0 0 var(--space-3);
+      font-family: var(--font-mono);
+      font-size: var(--t-14);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .not-found h1 {
+      margin: 0 0 var(--space-4);
+      font-family: var(--font-tight);
+      font-size: clamp(var(--t-32), 5vw, var(--t-48));
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .not-found p {
+      margin: 0 0 var(--space-6);
+      color: var(--text-muted);
+      font-size: var(--t-18);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/sentinel-log-site/" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="/sentinel-log-site/assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/sentinel-log-site/#overview">Overview</a></li>
+          <li><a href="/sentinel-log-site/#product">Product</a></li>
+          <li><a href="/sentinel-log-site/#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="not-found">
+    <div class="shell not-found-inner">
+      <p class="not-found-code">404</p>
+      <h1>This page is not in the register.</h1>
+      <p>The path you asked for is missing. Head back to the Sentinel Log home page.</p>
+      <p class="hero-cta">
+        <a class="btn btn-primary" href="/sentinel-log-site/">Back to home</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <div class="footer-bottom">
+        <p>© 2026 JG Systems Consulting Ltd. Sentinel Log is open source under the Apache License 2.0.</p>
+        <p>Sentinel Log is a record-keeping and decision-support tool. It is not a qualified safety-critical tool; users remain responsible for all safety judgements.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
