@@ -14,3 +14,9 @@ brainstorms/
 
 # zcode session state
 .zcode/
+
+# MemPalace per-project files
+mempalace.yaml
+
+# MemPalace per-project files (issue #185)
+entities.json
