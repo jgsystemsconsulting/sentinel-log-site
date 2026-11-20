@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-31: Issue, scope and revoke an access token. Actor: Any user with the token permission / Admin — Sentinel Log Guide</title>
+  <title>UC-31: Audit trail — Sentinel Log Guide</title>
   <meta name="robots" content="index,follow">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
@@ -27,7 +27,7 @@
   <main id="main">
     <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
       <p><a href="index.html">Guide</a></p>
-      <h1>UC-31: Issue, scope and revoke an access token. Actor: Any user with the token permission / Admin</h1>
+      <h1>UC-31: Audit trail</h1>
       <h2>Main flow</h2>
       <ol>
         <li>The administrator opens the audit trail at /hazards/audit/; the list renders with actor, action, and record columns (req-52).</li>
@@ -35,6 +35,7 @@
         <li>The administrator opens the configuration audit at /hazards/configuration/audit/; configuration-scoped entries render actor and action (req-52).</li>
         <li>The administrator opens one export entry; the detail names the actor, the action, and the exported object (req-52).</li>
       </ol>
+      <p><strong>Not in release:</strong> Token issue, scoping, and revocation are not in this release.</p>
       <h2>Cited check phrases</h2>
       <ul>
         <li>filters trail actor uat-admin</li>
