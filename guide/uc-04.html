@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-4: Copy hazard or control. Actor: Hazard owner — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-4: Copy hazard or control. Actor: Hazard owner</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>editor opens the UAT-0001 hazard detail page and submits the Copy form; the product creates a new hazard with a fresh identifier and the same editable fields, and the copy page names its source (req-6).</li>
+        <li>editor opens the UCTL-0001 control detail page and submits the Copy form; the product creates a new control with a fresh identifier, creation route copied, and a link back to its source (req-6, req-12).</li>
+        <li>editor opens the copy hazard causes tab and adds a cause; the cause renders under the copy with its own identifier (req-4).</li>
+      </ol>
+      <p><strong>Missing still:</strong> The frame set has no copy-dialog still. Do not treat another screen as the copy dialog.</p>
+    </article>
+  </main>
+</body>
+</html>
