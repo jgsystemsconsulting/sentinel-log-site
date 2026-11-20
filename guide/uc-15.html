@@ -35,7 +35,7 @@
         <li>administrator reviews the dry run: counts state create and update, nothing written yet (req-106).</li>
         <li>administrator confirms; the product commits the run and the done page states per-record provenance (req-32, req-33).</li>
         <li>administrator reads the done page; it names the committed import with created counts and states per-record provenance (req-33).</li>
-        <li>administrator runs the wizard a second time reusing the saved named mapping; the mapping applies and duplicate rows resolve through the product duplicate handling (req-32). ```mermaid sequenceDiagram participant A as Administrator (uat-admin) participant S as Product A-&gt;&gt;S: Upload import-hazards.csv for Meridian (req-32) S-&gt;&gt;A: Column mapping with saved named mapping A-&gt;&gt;S: Save mapping, dry run, confirm (req-32, req-106) S-&gt;&gt;A: Done page with per-record provenance (req-33) ```</li>
+        <li>administrator runs the wizard a second time reusing the saved named mapping; the mapping applies and duplicate rows resolve through the product duplicate handling (req-32).</li>
       </ol>
       <h2>Stills</h2>
       <figure>
