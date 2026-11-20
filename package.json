@@ -1,0 +1,11 @@
+{
+  "name": "sentinel-log-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/check.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}
