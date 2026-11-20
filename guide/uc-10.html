@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-10: Filter, group, sort, colour. Actor: All — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-10: Filter, group, sort, colour. Actor: All</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>viewer opens the register with no query; UAT-0001 renders and the count line states totals with archived excluded (req-26).</li>
+        <li>viewer filters status open; UAT-0001 stays listed and the applied filter chip renders (req-26).</li>
+        <li>viewer searches q UAT-0001; only the matching record lists and the count line states one shown (req-103).</li>
+        <li>viewer groups by residual risk; one band header per category states its hazard count (req-26).</li>
+        <li>viewer sorts residual score high first; the sort control shows the active rule (req-26).</li>
+        <li>every risk cell renders the colour rule chip with written category and icon, never colour alone (req-27).</li>
+      </ol>
+      <p><strong>Missing still:</strong> The frame set has no desktop filter still. The phone-only filter frame is not used as a desktop shot.</p>
+      <h2>Cited check phrases</h2>
+      <ul>
+        <li>opens register no query</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
