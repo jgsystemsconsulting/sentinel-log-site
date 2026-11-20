@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-3: Create hazard with guided analysis type, causes, and consequences. Actor: Hazard owner — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-3: Create hazard with guided analysis type, causes, and consequences. Actor: Hazard owner</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>editor opens /hazards/new/ and picks project Meridian and analysis type generic hazard identification; the form renders core fields (req-2, req-3).</li>
+        <li>editor enters a title sharing no words with the seeded or imported register rows plus description, system reference, location, operating mode, lifecycle stage, and owner; the duplicate offer stays silent and the system allocates the identifier server-side on save (req-3).</li>
+        <li>editor saves; the hazard detail page shows the title, description, context fields, and owner, and the register lists it (req-1, req-3).</li>
+        <li>editor opens the causes tab and adds a cause; the cause renders with its server-allocated identifier (req-4).</li>
+        <li>editor adds a consequence; the consequence renders with its server-allocated identifier (req-4).</li>
+        <li>editor records an initial risk assessment with severity and likelihood; the page shows the computed score and category (req-18, req-19).</li>
+        <li>editor adds a controlled-list free-text value; the value lands flagged for administrator review and stays out of the selectable list (req-38, req-107).</li>
+      </ol>
+      <h2>Stills</h2>
+      <figure>
+        <img src="img/shot-1-register.png" alt="Register before creating a hazard" width="960" loading="lazy">
+        <figcaption>Step context: register before create</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-2-new-form.png" alt="New hazard form" width="960" loading="lazy">
+        <figcaption>Step: opens /hazards/new/</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-3-filled-form.png" alt="Filled new hazard form" width="960" loading="lazy">
+        <figcaption>Step: title and fields entered</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-4-detail.png" alt="Hazard detail after save" width="960" loading="lazy">
+        <figcaption>Step: hazard detail after save</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-5-causes-consequences.png" alt="Causes and consequences" width="960" loading="lazy">
+        <figcaption>Step: causes and consequences</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-6-risk.png" alt="Initial risk assessment" width="960" loading="lazy">
+        <figcaption>Step: initial risk assessment</figcaption>
+      </figure>
+      <p><strong>Not in release:</strong> HAZOP and FMEA worksheet fields, mishap records, configuration items, cause categories, optional data sets, analysis sessions, failure-mode status, extended cause categories, software location, normal operation record, and novel-technology causes are not in this release.</p>
+    </article>
+  </main>
+</body>
+</html>
