@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-27: Import hazard line items from PDF documents. Actor: Admin — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-27: Import hazard line items from PDF documents. Actor: Admin</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>administrator uploads tables-uat.pdf as hazards for Meridian; the product extracts the largest table per page and moves to column mapping (req-119).</li>
+        <li>administrator maps Identifier, Title, Description, and Status and continues; the preview shows the dry run with page provenance per row (req-119, req-106).</li>
+        <li>administrator confirms; the done page states per-record provenance naming file, page, and table row (req-33, req-119). ```mermaid sequenceDiagram participant A as Administrator (uat-admin) participant S as Product A-&gt;&gt;S: Upload text-layer PDF for Meridian (req-119) S-&gt;&gt;A: Table per page with mapping and dry run (req-106) A-&gt;&gt;S: Confirm (req-119) S-&gt;&gt;A: Done page with page provenance (req-33) ```</li>
+      </ol>
+      <h2>Stills</h2>
+      <figure>
+        <img src="img/d3-import-preview-and-provenance.png" alt="PDF import preview and provenance" width="960" loading="lazy">
+        <figcaption>Uploads tables-uat.pdf preview and provenance</figcaption>
+      </figure>
+    </article>
+  </main>
+</body>
+</html>

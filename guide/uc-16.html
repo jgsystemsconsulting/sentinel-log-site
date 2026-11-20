@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-16: Export and round trip. Actor: Admin — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-16: Export and round trip. Actor: Admin</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>administrator opens the export page; the page offers xlsx, csv, and JSON formats over full, saved-view, and baseline scopes (req-34).</li>
+        <li>administrator exports JSON; the download filename matches the export stamp pattern and the document parses as a sentinel-log export (req-34).</li>
+        <li>administrator exports xlsx; the download filename matches the export stamp pattern (req-60).</li>
+        <li>administrator posts the JSON to the restore path; the shared dev register is non-empty so the product refuses with the empty-system message and writes nothing, and the register count stays unchanged (req-35).</li>
+        <li>administrator opens the Meridian register after the refused restore; the count line still lists at least the seeded hazards with archived excluded, proving nothing was written (req-35). The document-level round trip (wipe then restore_document) is verified by the named Django test test_round_trip_documents_match_except_header, not in the browser, because restoring would wipe the protected FWP-01 seed (req-35).</li>
+        <li>every export and the restore report carry the configured handling marking (req-117).</li>
+      </ol>
+      <h2>Stills</h2>
+      <figure>
+        <img src="img/e-export.png" alt="Export page" width="960" loading="lazy">
+        <figcaption>XLSX, CSV, and JSON formats</figcaption>
+      </figure>
+    </article>
+  </main>
+</body>
+</html>

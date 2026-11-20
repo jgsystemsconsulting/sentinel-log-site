@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-15: Import from spreadsheet. Actor: Admin — Sentinel Log Guide</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
+        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
+        <span class="brand-wordmark">Sentinel Log</span>
+      </a>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
+      <p><a href="index.html">Guide</a></p>
+      <h1>UC-15: Import from spreadsheet. Actor: Admin</h1>
+      <h2>Main flow</h2>
+      <ol>
+        <li>administrator uploads import-hazards.csv as hazards for Meridian; the product parses columns and moves to column mapping (req-32).</li>
+        <li>administrator maps Identifier, Title, Description, Analysis type, Status, and Owner, saves the mapping under a run-unique name, and proceeds; the preview shows three records to create with no errors (req-32, req-106).</li>
+        <li>administrator reviews the dry run: counts state create and update, nothing written yet (req-106).</li>
+        <li>administrator confirms; the product commits the run and the done page states per-record provenance (req-32, req-33).</li>
+        <li>administrator reads the done page; it names the committed import with created counts and states per-record provenance (req-33).</li>
+        <li>administrator runs the wizard a second time reusing the saved named mapping; the mapping applies and duplicate rows resolve through the product duplicate handling (req-32). ```mermaid sequenceDiagram participant A as Administrator (uat-admin) participant S as Product A-&gt;&gt;S: Upload import-hazards.csv for Meridian (req-32) S-&gt;&gt;A: Column mapping with saved named mapping A-&gt;&gt;S: Save mapping, dry run, confirm (req-32, req-106) S-&gt;&gt;A: Done page with per-record provenance (req-33) ```</li>
+      </ol>
+      <h2>Stills</h2>
+      <figure>
+        <img src="img/d1-import-upload.png" alt="Import upload" width="960" loading="lazy">
+        <figcaption>Uploads import-hazards.csv</figcaption>
+      </figure>
+    </article>
+  </main>
+</body>
+</html>
