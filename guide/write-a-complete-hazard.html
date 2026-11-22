@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-zcode-design>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write a complete hazard - Sentinel Log</title>
+  <meta name="description" content="Five writing rules and one filled hazard record: cause, consequence, control, evidence, action, and risk.">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="guide.css">
+  <link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <div class="nav-in">
+      <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a>
+      <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav>
+    </div>
+  </header>
+  <main id="main" class="guide-main">
+    <article class="shell">
+      <h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Write a complete hazard</h1>
+      <p class="lede">Five rules, then one filled record for feed pump P-101. Skim the rules if you already know the method. Read the record when a box is unclear. <a href="uc-03.html">Create a hazard</a> walks the clicks.</p>
+
+      <h2>Five rules</h2>
+      <ol class="steps">
+        <li>One event, one record. The title names the thing that fails and what it releases or does. A category such as "pump problems" does not identify an event. Two failures belong in two records.</li>
+        <li>The title is the hazard. The description is the situation. The title must stand alone in the register. The description adds the system, the operating mode, and the boundary of this record. Do not copy the title into the description.</li>
+        <li>A cause is why the event happens. A consequence is the harm, and how that harm occurs. "The seal wears and leaks" is a cause. "Flammable liquid pools in the pump house and can ignite" is a consequence. "The pump is dangerous" names neither.</li>
+        <li>A control is a measure that exists or will exist. Set the type and the criticality, and pick a hierarchy level from the project list. Link a preventive control to the cause. Link a mitigative control to the consequence. Evidence is a type and a document reference for a control you claim is already real. An action is open work that will produce missing evidence. A hope such as "be careful" names no measure.</li>
+        <li>Close the chain before you call the record done. You need at least one cause, one consequence, one control, and either evidence or an open action. Score initial risk on the unprotected consequence. Score residual risk only against the controls you named, and mark those controls on the residual assessment. If a named control has no evidence, set further action required.</li>
+      </ol>
+
+      <h2>Weak and strong</h2>
+      <div class="pair-scroll">
+        <table class="pairs">
+          <caption>Same event, weak wording beside strong wording.</caption>
+          <thead>
+            <tr><th scope="col">Box</th><th scope="col">Weak</th><th scope="col">Strong</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Title</th>
+              <td>Pump problems</td>
+              <td>Seal failure on feed pump P-101 releases flammable process liquid</td>
+            </tr>
+            <tr>
+              <th scope="row">Cause</th>
+              <td>The pump is dangerous</td>
+              <td>Mechanical seal wears and leaks during normal running</td>
+            </tr>
+            <tr>
+              <th scope="row">Consequence</th>
+              <td>Someone could get hurt</td>
+              <td>Flammable liquid pools in the pump house and can ignite, causing burns to anyone in the house</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>One filled record</h2>
+      <p class="lede">Fill these in order. The create form asks for the hazard first. Causes, consequences, controls, evidence, actions, and risk are separate records after save. Scores come from the project's matrix. This example does not invent a number.</p>
+      <ol class="steps">
+        <li>Hazard. Title: Seal failure on feed pump P-101 releases flammable process liquid. Description: During normal operation, a mechanical-seal failure on P-101 can release flammable process liquid into the pump house. This record covers that single failure. It does not cover a separate overfill of the feed tank. System/subsystem or breakdown-structure reference: Feed system / P-101. Location: Pump house. Operating mode: Normal running.</li>
+        <li>Cause. Text: Mechanical seal wears and leaks during normal running.</li>
+        <li>Consequence. Text: Flammable liquid pools in the pump house and can ignite, causing burns to anyone in the house.</li>
+        <li>Preventive control, linked to that cause. Description: Dual mechanical seal with a leakage alarm. Type: Preventive. Criticality: High. Hierarchy level: engineering controls.</li>
+        <li>Evidence on that control. Type: Test report. Document reference: P-101 seal leak-test procedure TP-14, rev C. Leave the procedure in the document. The log stores the reference.</li>
+        <li>Mitigative control, linked to that consequence. Description: Pump-house gas detection that isolates the feed on alarm. Type: Mitigative. Criticality: High. Hierarchy level: engineering controls.</li>
+        <li>Action on the gap. Title: Confirm pump-house gas detection isolates the feed. Status: Open. Raise it on the mitigative control. That evidence is not in the log yet.</li>
+        <li>Initial risk. Kind: Initial (unmitigated). Judge severity and likelihood on the unprotected consequence: a pool of flammable liquid that can ignite.</li>
+        <li>Residual risk. Kind: Residual (mitigated). Relies on both controls above. Further action required: yes, until the gas-detection evidence is in the log. Do not lower the residual score for a control you have not named.</li>
+      </ol>
+
+      <h2>Before you stop</h2>
+      <ul class="checks">
+        <li>Title names one event and stands alone in the register.</li>
+        <li>Description adds the situation and the boundary, and does not repeat the title.</li>
+        <li>At least one cause, written as why.</li>
+        <li>At least one consequence, written as harm.</li>
+        <li>At least one control, typed, with a hierarchy level, linked to the cause or the consequence.</li>
+        <li>Evidence on each control you claim is already real, or an open action on the gap.</li>
+        <li>Initial risk scored on the unprotected consequence.</li>
+        <li>Residual risk relies on the named controls.</li>
+        <li>Further action required if any named control lacks evidence.</li>
+      </ul>
+      <p class="note">Guide words for a workshop sit in IEC 61882. The matrix you score against is the project's risk criteria. This page does not replace either document.</p>
+    </article>
+  </main>
+</body>
+</html>

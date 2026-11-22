@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-28: Diagnostics export on a supplier-free install — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Run without supplier access - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-28: Diagnostics export on a supplier-free install</h1>
-      <p>Unpack, configuration edit, install script, smoke test, upgrade, backup, and restore stay in the release bundle and are not repeated here. See deploy/customer/install.sh and docs/operations/admin-guide.md. Do not paste shell commands on this page.</p>
-      <h2>Main flow</h2>
-      <ol>
-        <li>administrator opens the diagnostics export at /diagnostics/; browser downloads a JSON attachment whose payload carries product version, health status, and configuration with secrets removed (req-120).</li>
-        <li>administrator reads the downloaded payload and decides whether to send it to the supplier (req-120).</li>
-        <li>administrator reads the AI provider allowlist in the downloaded payload; the delivered configuration holds none, so every product function works with AI disabled (req-121).</li>
-      </ol>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg>Run without supplier access</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<p>Unpack, configuration edit, install script, smoke test, upgrade, backup, and restore stay in the release bundle and are not repeated here. See deploy/customer/install.sh and docs/operations/admin-guide.md. Do not paste shell commands on this page.
+</p> 
+<ol class="steps"> 
+<li>An administrator opens the diagnostics export at /diagnostics/; browser downloads a JSON attachment whose payload carries product version, health status, and configuration with secrets removed.</li> 
+<li>An administrator reads the downloaded payload and decides whether to send it to the supplier.</li> 
+<li>An administrator reads the AI provider allowlist in the downloaded payload; the delivered configuration holds none, so every product function works with AI disabled.</li> 
+</ol> 
+</article> 
+</main>
+
 </body>
 </html>

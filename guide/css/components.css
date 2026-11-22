@@ -1,0 +1,81 @@
+/* Sentinel Log prototype: component behaviour and states (see screen S1 and S2).
+   Look comes from utility classes in the markup; this file adds what utilities cannot:
+   hover, focus, pressed, disabled and busy states. */
+
+/* Buttons */
+.btn { cursor: pointer; text-decoration: none; }
+/* One height for every single-line control so buttons, selects and fields
+   line up in any row. Doubled class beats the py-N utilities. */
+.btn.btn, .select.select, .field.field:not(:has(textarea)) { box-sizing: border-box; min-height: var(--control-h); padding-top: 0; padding-bottom: 0; align-items: center; }
+.btn:hover { text-decoration: none; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary:hover { background: var(--surface-hover); }
+.btn-danger:hover { filter: brightness(0.92); }
+.btn:disabled, .btn[aria-disabled="true"] { cursor: not-allowed; }
+.btn[aria-busy="true"] { cursor: progress; }
+
+/* Filter chips: <button aria-pressed> */
+.chip:hover:not([aria-pressed="true"]) { background: var(--surface-hover); }
+
+/* Text fields and selects: the wrapper carries the border */
+.field input, .field select { border: 0; background: transparent; padding: 0; appearance: none; outline: none; min-width: 0; }
+.field textarea { border: 0; background: transparent; padding: 0; outline: none; width: 100%; min-width: 0; resize: vertical; }
+.field select { width: 100%; }
+.field:focus-within { border-color: var(--focus); box-shadow: 0 0 0 1px var(--focus); }
+.field[aria-invalid="true"], .field:has(input[aria-invalid="true"]) { border-color: var(--error); }
+
+/* Checkboxes and radios */
+.check { margin: 0; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; }
+/* WCAG 2.2 AA target-size (D-13): a bare 16px checkbox is below the 24px minimum, but its label row is the click target (label wraps input plus text). Enforce the row minimum here, prototype-first per D-04. */
+label:has(> input.check) { min-height: 24px; }
+
+/* Tabs */
+.tab { text-decoration: none; }
+.tab:hover:not([aria-current="page"]) { border-bottom: 3px solid var(--border-strong); }
+
+/* Top navigation */
+.mainnav a[aria-current="page"] { color: var(--accent); font-weight: 700; }
+
+/* Tables built with ARIA roles in the prototype; Django templates should use <table> */
+.table [role="row"] + [role="row"]:hover { background: var(--surface-hover); }
+
+/* Status change: closure fields appear only once Closed is picked. */
+form:not(:has(input[name="target_status"][value="closed"]:checked)) .closing-fields { display: none; }
+
+/* Risk chips and status badges: always icon or dot plus word */
+.risk, .status { white-space: nowrap; }
+
+/* Print: greyscale-safe, marking repeated by the print template.
+   D-08: A4 print rules ported from hazards/static/hazards/css/print.css
+   (plan 05.1.1-09). Tokens only, mapped to the prototype class names the
+   rebuilt B2 page uses. Type below 11px lives here, nowhere else. */
+@page {
+  size: A4 portrait;
+  margin: 10mm 10mm;
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 8pt;
+  }
+}
+@media print {
+  .topnav, .skip-link, .print-only-screen { display: none; }
+  .bt-1 { border-top: 1px solid var(--text-1); }
+  .bb-1, .bb-2 { break-after: avoid; }
+}
+
+/* Sign-in split panel (i1): brand panel left, form card right. */
+.signin-split { display: flex; flex-direction: row; width: 100%; }
+.signin-brand { position: relative; overflow: hidden; flex: 1 1 auto; min-width: 0; min-height: 560px; }
+.signin-brand-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.signin-brand-copy { position: absolute; left: 0; right: 0; bottom: 0; padding: 32px; max-width: 560px; }
+.signin-form-side { flex: 0 0 auto; width: 484px; display: flex; justify-content: center; padding: 80px 32px 96px; }
+@media (max-width: 768px) {
+.signin-split { flex-direction: column; }
+.signin-brand { min-height: 0; height: 280px; flex: none; }
+.signin-form-side { width: 100%; padding: 32px 16px; }
+}
+
+/* Sign-in page fills the viewport: shell is a flex column, main absorbs leftover height at any screen size. */
+body.auth-page { min-height: 100vh; display: flex; flex-direction: column; }
+body.auth-page > main { flex: 1 0 auto; }
+body.auth-page main.col > .signin-split { flex-grow: 1; }

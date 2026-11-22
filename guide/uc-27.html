@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-27: Import hazard line items from PDF documents. Actor: Admin — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Import from a PDF - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-27: Import hazard line items from PDF documents. Actor: Admin</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>administrator uploads tables-uat.pdf as hazards for Meridian; the product extracts the largest table per page and moves to column mapping (req-119).</li>
-        <li>administrator maps Identifier, Title, Description, and Status and continues; the preview shows the dry run with page provenance per row (req-119, req-106).</li>
-        <li>administrator confirms; the done page states per-record provenance naming file, page, and table row (req-33, req-119).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/d3-import-preview-and-provenance.png" alt="PDF import preview and provenance" width="960" loading="lazy">
-        <figcaption>Uploads tables-uat.pdf preview and provenance</figcaption>
-      </figure>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>Import from a PDF</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator uploads tables-uat.pdf as hazards for Meridian; Sentinel Log extracts the largest table per page and moves to column mapping. See Figure 1.
+<figure id="fig-1"> <img src="img/d3-import-preview-and-provenance.png" alt="PDF import preview and provenance" width="960" loading="lazy"> 
+<figcaption>Figure 1. PDF import preview and provenance</figcaption> 
+</figure></li> 
+<li>An administrator maps Identifier, Title, Description, and Status and continues; the preview shows the dry run with page provenance per row.</li> 
+<li>An administrator confirms; the done page states per-record provenance naming file, page, and table row.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

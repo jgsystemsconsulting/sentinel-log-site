@@ -1,47 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-8: Raise and close actions. Actor: Owner / manager — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Raise and close actions - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-8: Raise and close actions. Actor: Owner / manager</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor opens UAT-0001 controls and actions tab; tab lists UACT-0001 open with owner and due date (req-22).</li>
-        <li>editor opens the actions list; list pill counts name open and overdue actions and UACT-0002 carries the overdue flag (req-23).</li>
-        <li>editor opens UACT-0002; detail page carries the overdue flag with owner and due date (req-23).</li>
-        <li>editor opens UACT-0003; detail page shows closed status with closure evidence text (req-22).</li>
-        <li>editor creates an action from the UAT-0001 page; product allocates a fresh identifier server-side (req-22).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/g16-action-list.png" alt="Action list" width="960" loading="lazy">
-        <figcaption>Tab lists UACT-0001</figcaption>
-      </figure>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>Raise and close actions</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open the sample hazard, then Controls and actions; tab lists the open action open with owner and due date. See Figure 1.
+<figure id="fig-1"> <img src="img/g16-action-list.png" alt="Action list" width="960" loading="lazy"> 
+<figcaption>Figure 1. Tab lists the open action</figcaption> 
+</figure></li> 
+<li>Open the actions list; list pill counts name open and overdue actions and the overdue action carries the overdue flag.</li> 
+<li>Open the overdue action; detail page carries the overdue flag with owner and due date.</li> 
+<li>Open the closed action; detail page shows closed status with closure evidence text.</li> 
+<li>Create an action from the sample hazard page; Sentinel Log allocates a fresh identifier server-side.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

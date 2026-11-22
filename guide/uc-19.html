@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-19: View, edit or archive a hazard from the register list. Actor: Hazard owner — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Edit a hazard from the register - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-19: View, edit or archive a hazard from the register list. Actor: Hazard owner</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor opens /hazards/ with no filter; UAT-0001 lists and UAT-0003 is absent, and the scope line states archived hazards are excluded (req-1, req-103).</li>
-        <li>editor filters by status open; UAT-0001 remains listed (req-26).</li>
-        <li>editor opens UAT-0001 and edits its description, then saves; detail shows the new text and the configured status label (req-3, req-94).</li>
-        <li>editor opens the archived filter; UAT-0003 lists and its detail page carries the archived banner (req-1).</li>
-        <li>editor restores UAT-0003 from its detail page; it returns to the default list (req-1).</li>
-        <li>editor archives UAT-0003 again from its detail page; it leaves the default list (req-1).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/a-hazard-register.png" alt="Hazard register list" width="960" loading="lazy">
-        <figcaption>Hazard register list</figcaption>
-      </figure>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Edit a hazard from the register</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open the register with no filter; the sample hazard lists and the archived hazard is absent, and the scope line states archived hazards are excluded. See Figure 1.
+<figure id="fig-1"> <img src="img/a-hazard-register.png" alt="Hazard register list" width="960" loading="lazy"> 
+<figcaption>Figure 1. Hazard register list</figcaption> 
+</figure></li> 
+<li>Filter by status open; the sample hazard remains listed.</li> 
+<li>Open the sample hazard and edits its description, then saves; detail shows the new text and the configured status label.</li> 
+<li>Open the archived filter; the archived hazard is listed and its detail page carries the archived banner.</li> 
+<li>Restore the archived hazard from its detail page; it returns to the default list.</li> 
+<li>Archive that hazard again from its detail page; it leaves the default list.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

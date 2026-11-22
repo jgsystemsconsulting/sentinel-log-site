@@ -1,50 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-2: Configure project. Actor: Admin — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Configure a project - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-2: Configure project. Actor: Admin</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>The administrator opens the Django admin index and the configuration models are listed: analysis types, status labels, custom fields, controlled lists, identifier schemes, risk criteria versions, colour rules, dashboard panels, and ranking rule (req-2, req-142).</li>
-        <li>The administrator opens the Meridian risk criteria version; the seeded scales, categories, and matrix cells render and prior versions are retained read-only (req-17).</li>
-        <li>The administrator adds a controlled-list value through the Django admin; the new value appears in the list changelist (req-38).</li>
-        <li>The administrator adds a status label on the Meridian project mapped to a core status; the label appears on the project status label changelist (req-94).</li>
-        <li>The administrator opens the configuration package page at /hazards/configuration/package/; the export and import panels render (req-142).</li>
-        <li>The administrator submits the export form and the browser downloads a JSON package whose header format is sentinel-log-configuration and whose families include criteria_versions, controlled_lists, status_labels, custom_fields, colour_rules, and dashboard_panels (req-142).</li>
-        <li>The administrator uploads the downloaded file to the import form; on a register carrying risk assessments the product refuses with the populated-system message and writes nothing, and on an empty installation it re-imports and reports Import applied with the applied families named (req-142).</li>
-        <li>The administrator opens the configuration audit page at /hazards/configuration/audit/; the export session is recorded with actor and action (req-52, req-142).</li>
-      </ol>
-      <p><strong>Missing still:</strong> No configuration-screen frame exists in the frame set. Do not borrow another screen.</p>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>configuration models listed</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0.33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Configure a project</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator opens Settings. The configuration lists are: analysis types, status labels, custom fields, controlled lists, identifier schemes, risk criteria versions, colour rules, dashboard panels, and ranking rule.</li> 
+<li>An administrator opens the Meridian risk criteria version; the seeded scales, categories, and matrix cells render and prior versions are retained read-only.</li> 
+<li>An administrator adds a controlled-list value in Settings; the new value appears in the list changelist.</li> 
+<li>An administrator adds a status label on the Meridian project mapped to a core status; the label appears on the project status label changelist.</li> 
+<li>An administrator opens the Configuration package; the export and import panels render.</li> 
+<li>An administrator submits the export form and the browser downloads a JSON package whose header format is sentinel-log-configuration and whose families include criteria_versions, controlled_lists, status_labels, custom_fields, colour_rules, and dashboard_panels.</li> 
+<li>An administrator uploads the downloaded file to the import form; on a register carrying risk assessments Sentinel Log refuses with the populated-system message and writes nothing, and on an empty installation it re-imports and reports Import applied with the applied families named.</li> 
+<li>An administrator opens the Configuration audit; the export session is recorded with actor and action.</li> 
+</ol> 
+<p><strong>Missing still:</strong> No configuration-screen frame exists in the frame set. Do not borrow another screen.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

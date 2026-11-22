@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-12: View and print management summary. Actor: Decision-maker. The UC-24 report set below stays excluded — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Management summary - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-12: View and print management summary. Actor: Decision-maker. The UC-24 report set below stays excluded</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>administrator opens the management summary; panels render in the configured order with top hazards, control coverage, evidence status, open actions, and residual distribution (req-28).</li>
-        <li>administrator filters the summary by status open; the filter label names the filter on screen (req-26, req-28).</li>
-        <li>administrator hides one panel on the panels page and shows it again; the summary reflects the round trip with the original order restored (req-28).</li>
-        <li>administrator opens the printable summary; the single report carries the configured handling marking, dataset name, filter labels, and ranking rule (req-29, req-117).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/b-management-summary.png" alt="Management summary" width="960" loading="lazy">
-        <figcaption>Management summary</figcaption>
-      </figure>
-      <p><strong>Not in release:</strong> The excluded UC-24 report set is not in this release. No uc-24.html page exists.</p>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>opens management summary</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Management summary</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator opens the management summary; panels render in the configured order with top hazards, control coverage, evidence status, open actions, and residual distribution. See Figure 1.
+<figure id="fig-1"> <img src="img/b-management-summary.png" alt="Management summary" width="960" loading="lazy"> 
+<figcaption>Figure 1. Management summary</figcaption> 
+</figure></li> 
+<li>An administrator filters the summary by status open; the filter label names the filter on screen.</li> 
+<li>An administrator hides one panel on the panels page and shows it again; the summary reflects the round trip with the original order restored.</li> 
+<li>An administrator opens the printable summary; the single report carries the configured handling marking, dataset name, filter labels, and ranking rule.</li> 
+</ol>
+<p class="note"><strong>Not in this release.</strong> The extra report pack is not included yet.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

@@ -1,50 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-13: Create and compare baselines. Actor: Reviewer / admin — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Compare baselines - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-13: Create and compare baselines. Actor: Reviewer / admin</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>administrator opens the baseline list; the list shows existing baselines and the frozen counts (req-53).</li>
-        <li>administrator creates a named baseline with a reason and the immutability acknowledgement; the product allocates a fresh BL identifier and the detail page names the baseline with its freeze time (req-53).</li>
-        <li>administrator reads the frozen register on the detail page; UAT-0001 renders with its frozen title and residual category (req-53).</li>
-        <li>administrator compares the baseline against live data by opening the summary with the baseline dataset and the live register side by side; frozen counts differ from live counts after a record changes (req-53).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/h3-baseline-list.png" alt="Baseline list" width="960" loading="lazy">
-        <figcaption>Opens baseline list</figcaption>
-      </figure>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>opens baseline list</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>Compare baselines</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator opens the baseline list; the list shows existing baselines and the frozen counts. See Figure 1.
+<figure id="fig-1"> <img src="img/h3-baseline-list.png" alt="Baseline list" width="960" loading="lazy"> 
+<figcaption>Figure 1. Baseline list</figcaption> 
+</figure></li> 
+<li>An administrator creates a named baseline with a reason and the immutability acknowledgement; Sentinel Log allocates a fresh BL identifier and the detail page names the baseline with its freeze time.</li> 
+<li>An administrator reads the frozen register on the detail page; the sample hazard renders with its frozen title and residual category.</li> 
+<li>An administrator compares the baseline against live data by opening the summary with the baseline dataset and the live register side by side; frozen counts differ from live counts after a record changes.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

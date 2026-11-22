@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-5: Link or create controls; set hierarchy level. Actor: Hazard owner — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Link controls - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-5: Link or create controls; set hierarchy level. Actor: Hazard owner</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor opens UAT-0001 controls tab; tab lists linked controls with hierarchy level and status (req-10).</li>
-        <li>editor creates a control from the hazard page; product allocates a fresh identifier server-side and stores hierarchy level, control type, criticality, and status (req-11, req-12).</li>
-        <li>editor opens the control detail page; page lists linked hazards so the cross-link reads both ways (req-10).</li>
-        <li>editor opens UCTL-0002; page shows implemented status with hierarchy level engineering controls (req-11).</li>
-        <li>editor opens UCTL-0003; page shows verified status (req-12).</li>
-        <li>editor opens the formal review on UCTL-0004; review shows rejected outcome with required changes, which is how the product records a rejected control with its reason (req-25).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/h1-control-list.png" alt="Controls list" width="960" loading="lazy">
-        <figcaption>Controls tab; tab lists linked controls</figcaption>
-      </figure>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Link controls</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open the sample hazard, then Controls; tab lists linked controls with hierarchy level and status. See Figure 1.
+<figure id="fig-1"> <img src="img/h1-control-list.png" alt="Controls list" width="960" loading="lazy"> 
+<figcaption>Figure 1. Controls tab; tab lists linked controls</figcaption> 
+</figure></li> 
+<li>Create a control from the hazard page; Sentinel Log allocates a fresh identifier server-side and stores hierarchy level, control type, criticality, and status.</li> 
+<li>Open the control detail page; page lists linked hazards so the cross-link reads both ways.</li> 
+<li>Open the implemented control; page shows implemented status with hierarchy level engineering controls.</li> 
+<li>Open the verified control; page shows verified status.</li> 
+<li>Open the formal review on the control under review; review shows rejected outcome with required changes, which is how Sentinel Log records a rejected control with its reason.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

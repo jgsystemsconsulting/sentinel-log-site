@@ -1,0 +1,174 @@
+/*
+ * Sentinel Log design tokens: the only place colours, type, spacing and radii are defined.
+ * Used by the HTML prototype (docs/UX/prototype) and, later, by the Django templates.
+ * Token names match the original Pencil variables, so var(--text-2) etc. are stable.
+ * Contrast ratios against white are noted for text colours (WCAG 2.2 AA needs 4.5:1).
+ */
+:root {
+  /* Surfaces */
+  --bg: #FFFFFF;
+  --surface: #F6F7F9;
+  --surface-alt: #FBFBFC;     /* subtle row or card tint seen in frames */
+  --surface-hover: #E9ECF1;   /* hover on rows and buttons */
+  --border: #DDE1E7;          /* decorative dividers only (1.3:1, not for inputs) */
+  --border-subtle: #E5E7EB;   /* lightest dividers seen in frames */
+  --border-strong: #7A8392;   /* input borders and meaningful boundaries (3.8:1) */
+
+  /* Text */
+  --text-1: #14181F;          /* primary (17.8:1) */
+  --text-2: #4A5260;          /* secondary (7.9:1) */
+  --text-3: #5F6876;          /* tertiary, captions (5.6:1) */
+  --text-strong: #111827;     /* page titles used in some frames */
+  --text-muted: #374151;      /* body emphasis seen in frames */
+
+  /* Brand and interaction */
+  --accent: #00437A;          /* primary buttons, links, active nav (10.1:1) */
+  --accent-hover: #00335E;    /* primary button hover */
+  --accent-pressed: #002947;  /* active primary button; sits between hover and ink */
+  --accent-weak: #E7EEF6;     /* selected rows, active chips */
+  --focus: #1D4ED8;           /* focus ring (6.7:1) */
+  --disabled-bg: #EEF1F4;     /* disabled control fill, between surface and hover */
+  --disabled-fg: #5F6876;     /* disabled text; AA-exempt but kept at text-3 readability */
+  --link: var(--accent);      /* inline text links; underline on hover only (base.css) */
+  --mark-bg: #14181F;         /* handling marking bar */
+  --mark-fg: #FFFFFF;
+
+  /* Code preview on dark ground (export screen) */
+  --code-fg: #E6E9EF;
+
+  /* Status tones */
+  --warning: #7A4300;
+  --warning-tint: #FFFBEB;
+  --error: #8E1B1B;
+  --error-bg: #FBE4E4;
+  --error-tint: #FFF7F7;
+
+  /* Success messages are the Tolerable pair, aliased so callouts read by meaning */
+  --success: var(--r-tol-fg);
+  --success-bg: var(--r-tol-bg);
+
+  /* Risk categories: always pair with an icon or symbol and a text label */
+  --r-intol-bg: #FBE4E4;  --r-intol-fg: #8E1B1B;   /* Intolerable  7.5:1 */
+  --r-undes-bg: #FDF0CF;  --r-undes-fg: #7A4300;   /* Undesirable  7.1:1 */
+  --r-tol-bg:   #E2F2E7;  --r-tol-fg:   #1B6332;   /* Tolerable    6.3:1 */
+  --r-negl-bg:  #ECEEF2;  --r-negl-fg:  #3B4250;   /* Negligible   8.7:1 */
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --fs-2xs: 8px;    /* rare, badges in print */
+  --fs-xs: 9px;     /* print stamps, micro labels */
+  --fs-sm: 11px;    /* table meta, captions */
+  --fs-xs-2: 12px;  /* dense table cells, chips */
+  --fs-base: 13px;  /* most UI text */
+  --fs-body: 14px;  /* body, inputs, buttons */
+  --fs-md: 15px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;    /* subtitles */
+  --fs-2xl: 22px;   /* section headings */
+  --fs-3xl: 26px;   /* page headings */
+  --fs-4xl: 28px;   /* headline stat values */
+  --fs-hero: 32px;
+  --fs-display: 40px; /* design title pages only */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --lh-tight: 1.2;
+  --lh-base: 1.45;
+  --lh-loose: 1.6;
+
+  /* Spacing scale (px) from gap and padding values in frames */
+  --space-0: 0;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 10px;
+  --space-6: 12px;
+  --space-7: 14px;
+  --space-8: 16px;
+  --space-9: 20px;
+  --space-10: 24px;
+  --space-11: 28px;
+  --space-12: 32px;
+  --space-13: 40px;
+
+  /* Radius */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;     /* most common in frames */
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  /* Focus and elevation */
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--focus);
+  --shadow-sm: 0 1px 2px rgba(20, 24, 31, 0.06);
+  --shadow-md: 0 4px 12px rgba(20, 24, 31, 0.10);
+
+  /* Motion: short and purposeful; transform and opacity only, never all-properties */
+  --dur-fast: 80ms;           /* hover, chip and control feedback */
+  --dur-base: 160ms;          /* reveals, panel and status changes */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Layout */
+  --page-max: 1440px;
+  --page-pad: 32px;
+  --nav-height: 48px;
+  --control-h: 36px;       /* every single-line button, select and text field */
+  --col-gutter: 16px;
+
+  /* Stacking order; the skip link uses 10 in base.css */
+  --z-skip: 10;
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+
+  /* Reference viewports for checks, not media-query values (custom properties
+     do not reach @media): mobile 390, tablet 930, desktop 1440. */
+}
+
+/*
+ * Usage rules: the binding half of this file. The values above say what is
+ * available; these rules say how it is used. Component CSS and Django templates
+ * are checked against them (see preview.html for the rendered guide).
+ *
+ * R1  Tokens only. Components and templates reference var(--*) and never raw
+ *     hex or px one-offs. A new colour or size means adding a token here first,
+ *     with its contrast note.
+ * R2  Contrast. Every text and icon colour meets WCAG 2.2 AA (4.5:1) against
+ *     its fill; the ratios annotated above are the contract. Disabled text is
+ *     the only exemption.
+ * R3  Boundaries. --border for decorative dividers only; --border-strong for
+ *     input borders and meaningful boundaries; --border-subtle for the lightest
+ *     row rules. A hairline of --text-1 is reserved for document structure in
+ *     print.
+ * R4  Risk and status colour never carries meaning alone. --r-* pairs and
+ *     status dots always ship with an icon or dot plus a word (components.css).
+ * R5  Handling marking. --mark-bg / --mark-fg is the confidentiality bar and
+ *     nothing else; never reuse it for accents or buttons.
+ * R6  Controls. Every single-line control is --control-h tall. --radius-md is
+ *     the default radius, --radius-sm for inline chips, --radius-lg+ for large
+ *     surfaces and display artefacts. Disabled controls use --disabled-* and
+ *     cursor rules, not opacity hacks.
+ * R7  Type. Sizes come from the --fs-* scale; body text is 13-14px and nothing
+ *     below 11px outside print. Number columns set tabular figures. The odd
+ *     utility values seen in screens (fs-10/17/20/24, gap-5/18/22, r-18) are
+ *     observed drift from frames, not new slots; new work maps to the scale.
+ * R8  Focus. :focus-visible with the standard outline (base.css). The ring
+ *     colour never changes per component.
+ * R9  Motion. Animate transform and opacity only, never transition: all.
+ *     Durations come from --dur-*; prefers-reduced-motion disables all of it
+ *     (base.css).
+ * R10 Print. A4 through @page (components.css); risk pairs stay greyscale-safe;
+ *     the marking bar repeats on every printed page via the print template.
+ * R11 Layout. Compose with --space-* steps, --control-h and --col-gutter; page
+ *     content caps at --page-max with --page-pad.
+ *
+ * Enforced by scripts/check_design_tokens.py, which runs in pre-commit and CI
+ * (SYNC, R1, R2, R4, R7, R9: the mechanically checkable subset). The rendered
+ * guide lives at docs/UX/prototype/preview.html.
+ */

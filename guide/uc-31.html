@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-31: Audit trail — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Read the audit trail - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-31: Audit trail</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>The administrator opens the audit trail at /hazards/audit/; the list renders with actor, action, and record columns (req-52).</li>
-        <li>The administrator filters the trail by actor uat-admin; only that actor&#x27;s entries remain (req-52).</li>
-        <li>The administrator opens the configuration audit at /hazards/configuration/audit/; configuration-scoped entries render actor and action (req-52).</li>
-        <li>The administrator opens one export entry; the detail names the actor, the action, and the exported object (req-52).</li>
-      </ol>
-      <p><strong>Not in release:</strong> Token issue, scoping, and revocation are not in this release.</p>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>filters trail actor uat-admin</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>Read the audit trail</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator opens the Audit trail; the list renders with actor, action, and record columns.</li> 
+<li>An administrator filters the trail by actor uat-admin; only that actor&#x27;s entries remain.</li> 
+<li>An administrator opens the configuration audit at Configuration audit; configuration-scoped entries render actor and action.</li> 
+<li>An administrator opens one export entry; the detail names the actor, the action, and the exported object.</li> 
+</ol> 
+<p class="note"><strong>Not in this release.</strong> Token issue, scoping, and revocation are not in this release.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

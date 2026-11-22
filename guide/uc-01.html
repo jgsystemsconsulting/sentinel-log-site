@@ -1,52 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-1: Sign in; manage users and roles. Actor: All / Admin — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Sign in and manage users - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-1: Sign in; manage users and roles. Actor: All / Admin</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>The user opens /accounts/login/ and the sign-in form renders with username and password fields (req-48).</li>
-        <li>The user enters valid credentials and submits; the product creates a session and lands on the register (req-48).</li>
-        <li>An administrator opens the Django admin users page; the seeded users exist with their roles (req-47).</li>
-        <li>The user signs out; the session ends and protected pages redirect to sign in (req-48).</li>
-        <li>The product serves the session over the configured secure defaults with no external calls (req-50).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/i1-sign-in.png" alt="Sign-in form with username and password fields" width="960" loading="lazy">
-        <figcaption>Sign-in form renders username and password fields</figcaption>
-      </figure>
-      <p><strong>Not in release:</strong> Profile organisation and phone fields, single sign-on, second factor, requirements text edits, personal data handling, erasure audit behaviour, personal data export and erasure UI, and full ASVS Level 2 scope are not in this release.</p>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>sign-in form renders username and password fields</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>Sign in and manage users</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open Sign in. The form asks for a username and a password. See Figure 1.
+<figure id="fig-1"> <img src="img/i1-sign-in.png" alt="Sign-in form with username and password fields" width="960" loading="lazy"> 
+<figcaption>Figure 1. Sign-in form</figcaption> 
+</figure></li> 
+<li>Enter valid credentials and submit; Sentinel Log creates a session and lands on the register.</li> 
+<li>An administrator opens Users. The people already on the system are listed, with their roles.</li> 
+<li>Sign out; the session ends and protected pages redirect to sign in.</li> 
+<li>The session stays on this system. Nothing is sent to an outside service.</li> 
+</ol>
+<p class="note"><strong>Not in this release.</strong> Profile fields, single sign-on, a second factor, and personal-data tools.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

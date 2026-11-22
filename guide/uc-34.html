@@ -1,45 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-34: Evidence action — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Raise an action from evidence - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-34: Evidence action</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor opens UEVD-0002 evidence detail; the page shows the UACT-0004 gap action with its title Re-inspect fan reversal timing evidence (req-22).</li>
-        <li>editor opens the raise-action page scoped to the evidence record and submits title, due date, and open status; the product allocates a fresh identifier server-side and returns to the evidence detail showing the new action (req-22).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/g18-action-form-raise.png" alt="Raise action form" width="960" loading="lazy">
-        <figcaption>Raise action from evidence</figcaption>
-      </figure>
-      <p><strong>Not in release:</strong> Assistant quality checks are not in this release. No uc-33.html, uc-36.html, or uc-37.html pages exist.</p>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>Raise an action from evidence</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open the rejected evidence; the page shows the gap action gap action with its title Re-inspect fan reversal timing evidence.</li> 
+<li>Open the raise-action page scoped to the evidence record and submit title, due date, and open status; Sentinel Log allocates a fresh identifier server-side and returns to the evidence detail showing the new action. See Figure 1.
+<figure id="fig-1"> <img src="img/g18-action-form-raise.png" alt="Raise action form" width="960" loading="lazy"> 
+<figcaption>Figure 1. Raise action from evidence</figcaption> 
+</figure></li> 
+</ol>
+<p class="note"><strong>Not in this release.</strong> Assistant quality checks are not in this release. No,, or pages exist.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

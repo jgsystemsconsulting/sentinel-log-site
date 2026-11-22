@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-14: View audit history. Actor: Reviewer. The hazard page also shows its status history — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Status history - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-14: View audit history. Actor: Reviewer. The hazard page also shows its status history</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor edits UAT-0001 description in the same run; audit list then shows an update entry for the hazard with actor and time (req-52).</li>
-        <li>admin opens the audit list; list shows actor, action, and record columns with filter controls (req-52).</li>
-        <li>admin filters by actor; list keeps matching rows (req-52).</li>
-        <li>admin opens the update entry; detail shows actor, action, record, and the old and new description values (req-52).</li>
-        <li>reviewer opens UAT-0001 history tab; tab shows status transitions with reason and evidence columns (req-78).</li>
-        <li>audit list and entry show no edit or delete affordance for entries; the trail is append-only (req-52).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/g8-hazard-detail-history.png" alt="Hazard status history on the hazard page" width="960" loading="lazy">
-        <figcaption>Hazard status history on the hazard page</figcaption>
-      </figure>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>hazard status history</li>
-      
-        <li>audit list shows update entry</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Status history</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Edit the sample hazard description in the same run; audit list then shows an update entry for the hazard with actor and time.</li> 
+<li>Admin opens the audit list; list shows actor, action, and record columns with filter controls.</li> 
+<li>Admin filters by actor; list keeps matching rows.</li> 
+<li>Admin opens the update entry; detail shows actor, action, record, and the old and new description values.</li> 
+<li>A reviewer opens the sample hazard history tab; tab shows status transitions with reason and evidence columns. See Figure 1.
+<figure id="fig-1"> <img src="img/g8-hazard-detail-history.png" alt="Hazard status history on the hazard page" width="960" loading="lazy"> 
+<figcaption>Figure 1. Hazard status history on the hazard page</figcaption> 
+</figure></li> 
+<li>Audit list and entry show no edit or delete affordance for entries; the trail is append-only.</li> 
+</ol>
+</article> 
+</main>
+
 </body>
 </html>

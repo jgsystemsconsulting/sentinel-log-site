@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-35: Switch on and govern interfaces and AI for a project. Actor: Admin — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Switch interfaces on or off - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-35: Switch on and govern interfaces and AI for a project. Actor: Admin</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>The administrator downloads the diagnostics payload at /diagnostics/; the JSON carries AI_PROVIDER_ALLOWLIST as an empty list and LOCKOUT_THRESHOLD alongside handling marking and database health (req-121).</li>
-        <li>The administrator opens the configuration audit at /hazards/configuration/audit/; the diagnostics download is recorded as an export entry with the administrator as actor (req-52).</li>
-      </ol>
-      <p><strong>Not in release:</strong> Interface switches, data egress, and marking scale are not in this release.</p>
-      <h2>Cited check phrases</h2>
-      <ul>
-        <li>AI_PROVIDER_ALLOWLIST empty list</li>
-      </ul>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="6"/><circle cx="15" cy="12" r="2"/></svg>Switch interfaces on or off</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>An administrator downloads the diagnostics payload at /diagnostics/; the JSON carries AI_PROVIDER_ALLOWLIST as an empty list and LOCKOUT_THRESHOLD alongside handling marking and database health.</li> 
+<li>An administrator opens the configuration audit at Configuration audit; the diagnostics download is recorded as an export entry with the administrator as actor.</li> 
+</ol> 
+<p class="note"><strong>Not in this release.</strong> Interface switches, data egress, and marking scale are not in this release.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>

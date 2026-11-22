@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UC-21: Change status, close or transfer hazard. Actor: Hazard owner — Sentinel Log Guide</title>
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css">
+<html lang="en-GB" data-zcode-design>
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Change status, close, or transfer - Sentinel Log</title> <meta name="robots" content="index,follow"> 
+<link rel="stylesheet" href="css/tokens.css"> 
+<link rel="stylesheet" href="css/base.css"> 
+<link rel="stylesheet" href="css/components.css"> 
+<link rel="stylesheet" href="css/utilities.css"> 
+<link rel="stylesheet" href="guide.css"> 
+<link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../index.html" aria-label="Sentinel Log home">
-        <img class="brand-mark" src="../assets/thread-mark.svg" alt="" width="72" height="24">
-        <span class="brand-wordmark">Sentinel Log</span>
-      </a>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <article class="shell" style="padding-block: var(--space-7); max-width: 48rem;">
-      <p><a href="index.html">Guide</a></p>
-      <h1>UC-21: Change status, close or transfer hazard. Actor: Hazard owner</h1>
-      <h2>Main flow</h2>
-      <ol>
-        <li>editor opens UAT-0004 and opens Change status; the form lists target statuses with the configured labels (req-94).</li>
-        <li>editor moves UAT-0004 from open to controlled with a reason; detail shows the new status and the history tab gains one row naming the actor and reason (req-3, req-78).</li>
-        <li>editor closes UAT-0004 with closure reason out of scope, a justification, and evidence; detail shows the Closure block with reason, justification, and evidence, and history gains the closing row (req-118).</li>
-        <li>editor reopens UAT-0004 to open; closure facts clear and history keeps the closed period rows (req-3, req-78).</li>
-      </ol>
-      <h2>Stills</h2>
-      <figure>
-        <img src="img/g10-change-status-close.png" alt="Change status close" width="960" loading="lazy">
-        <figcaption>Close hazard status change</figcaption>
-      </figure>
-      <p><strong>Not in release:</strong> Risk acceptance (UC-20) and reassessment chains (UC-22) are not in this release. No uc-20.html or uc-22.html pages exist.</p>
-    </article>
-  </main>
+
+<body> <a class="skip-link" href="#main">Skip to content</a> 
+<header class="site-nav"> <div class="nav-in"> <a class="brand" href="../index.html"><img src="img/sentinel-shield.svg" alt="" width="36" height="36">Sentinel Log</a> <nav class="nav-links" aria-label="Guide"><a href="index.html">Guide</a></nav> </div> 
+</header> 
+<main id="main" class="guide-main"> 
+<article class="shell"> 
+<h1 class="with-icon"><svg class="task-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>Change status, close, or transfer</h1>
+<p class="back"><a href="index.html">Guide</a></p> 
+<ol class="steps"> 
+<li>Open the hazard you are moving, then Change status; the form lists target statuses with the configured labels.</li> 
+<li>Move that hazard from Open to controlled with a reason; detail shows the new status and the history tab gains one row naming the actor and reason.</li> 
+<li>Close that hazard with closure reason out of scope, a justification, and evidence; detail shows the Closure block with reason, justification, and evidence, and history gains the closing row. See Figure 1.
+<figure id="fig-1"> <img src="img/g10-change-status-close.png" alt="Change status close" width="960" loading="lazy"> 
+<figcaption>Figure 1. Close hazard status change</figcaption> 
+</figure></li> 
+<li>Reopen that hazard to open; closure facts clear and history keeps the closed period rows.</li> 
+</ol>
+<p class="note"><strong>Not in this release.</strong> Risk acceptance () and reassessment chains () are not in this release. No or pages exist.
+</p> 
+</article> 
+</main>
+
 </body>
 </html>
