@@ -35,6 +35,22 @@ table.pairs tbody th { color: var(--text-1); font-weight: 600; width: 8rem; }
 div.pair-scroll { overflow-x: auto; }
 ul.checks { margin: 8px 0 0; padding-left: 1.25rem; }
 ul.checks li { padding: 6px 0; border-top: 1px solid var(--border-subtle); }
+.fill-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 420px); gap: 24px; align-items: start; margin-top: 8px; counter-reset: step; }
+.fill-num::before { content: counter(step); counter-increment: step; color: var(--accent); font-weight: 700; margin-right: 0.5rem; }
+ol.steps.fill-rest { counter-reset: step 1; }
+.fill-when { margin: 0 0 8px; font-weight: 600; color: var(--text-1); }
+.fill-fields { margin: 0; }
+.fill-fields div { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 10px 0; border-top: 1px solid var(--border-subtle); }
+.fill-fields dt { font-weight: 600; color: var(--text-1); }
+.fill-fields dd { margin: 0; color: var(--text-1); }
+ol.steps .fill-fields { margin-top: 8px; }
+@media (max-width: 1100px) {
+  .fill-split { grid-template-columns: 1fr; }
+  .fill-split figure { max-width: 36rem; }
+}
+.fill-split figure { margin: 0; }
+.fill-split img { width: 100%; height: auto; }
+
 
 .note strong { color: var(--text-1); }
 .stills { display: flex; flex-direction: column; gap: 16px; align-items: stretch; }

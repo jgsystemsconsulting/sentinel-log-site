@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="guide.css">
+  <link rel="stylesheet" href="guide.css?v=3">
   <link rel="icon" href="img/sentinel-shield.svg" type="image/svg+xml">
 </head>
 <body>
@@ -64,16 +64,79 @@
 
       <h2>One filled record</h2>
       <p class="lede">Fill these in order. The create form asks for the hazard first. Causes, consequences, controls, evidence, actions, and risk are separate records after save. Scores come from the project's matrix. This example does not invent a number.</p>
-      <ol class="steps">
-        <li>Hazard. Title: Seal failure on feed pump P-101 releases flammable process liquid. Description: During normal operation, a mechanical-seal failure on P-101 can release flammable process liquid into the pump house. This record covers that single failure. It does not cover a separate overfill of the feed tank. System/subsystem or breakdown-structure reference: Feed system / P-101. Location: Pump house. Operating mode: Normal running.</li>
-        <li>Cause. Text: Mechanical seal wears and leaks during normal running.</li>
-        <li>Consequence. Text: Flammable liquid pools in the pump house and can ignite, causing burns to anyone in the house.</li>
-        <li>Preventive control, linked to that cause. Description: Dual mechanical seal with a leakage alarm. Type: Preventive. Criticality: High. Hierarchy level: engineering controls.</li>
-        <li>Evidence on that control. Type: Test report. Document reference: P-101 seal leak-test procedure TP-14, rev C. Leave the procedure in the document. The log stores the reference.</li>
-        <li>Mitigative control, linked to that consequence. Description: Pump-house gas detection that isolates the feed on alarm. Type: Mitigative. Criticality: High. Hierarchy level: engineering controls.</li>
-        <li>Action on the gap. Title: Confirm pump-house gas detection isolates the feed. Status: Open. Raise it on the mitigative control. That evidence is not in the log yet.</li>
-        <li>Initial risk. Kind: Initial (unmitigated). Judge severity and likelihood on the unprotected consequence: a pool of flammable liquid that can ignite.</li>
-        <li>Residual risk. Kind: Residual (mitigated). Relies on both controls above. Further action required: yes, until the gas-detection evidence is in the log. Do not lower the residual score for a control you have not named.</li>
+      <div class="fill-split">
+        <section>
+          <p class="fill-when"><span class="fill-num"></span>Hazard. On the create form, before you save.</p>
+          <dl class="fill-fields">
+            <div><dt>Title</dt><dd>Seal failure on feed pump P-101 releases flammable process liquid</dd></div>
+            <div><dt>Description</dt><dd>During normal operation, a mechanical-seal failure on P-101 can release flammable process liquid into the pump house. This record covers that single failure. It does not cover a separate overfill of the feed tank.</dd></div>
+            <div><dt>System/subsystem or breakdown-structure reference</dt><dd>Feed system / P-101</dd></div>
+            <div><dt>Location</dt><dd>Pump house</dd></div>
+            <div><dt>Operating mode</dt><dd>Normal running</dd></div>
+          </dl>
+        </section>
+        <figure>
+          <img src="img/shot-3-filled-form.png" alt="New hazard form with the title and description filled" width="960">
+          <figcaption>Create form. Title and description are the first two boxes.</figcaption>
+        </figure>
+      </div>
+      <ol class="steps fill-rest">
+        <li>
+          <p class="fill-when">Cause. Add this after save.</p>
+          <dl class="fill-fields"><div><dt>Text</dt><dd>Mechanical seal wears and leaks during normal running</dd></div></dl>
+        </li>
+        <li>
+          <p class="fill-when">Consequence.</p>
+          <dl class="fill-fields"><div><dt>Text</dt><dd>Flammable liquid pools in the pump house and can ignite, causing burns to anyone in the house</dd></div></dl>
+        </li>
+        <li>
+          <p class="fill-when">Preventive control. Link it to that cause.</p>
+          <dl class="fill-fields">
+            <div><dt>Description</dt><dd>Dual mechanical seal with a leakage alarm</dd></div>
+            <div><dt>Type</dt><dd>Preventive</dd></div>
+            <div><dt>Criticality</dt><dd>High</dd></div>
+            <div><dt>Hierarchy level</dt><dd>engineering controls</dd></div>
+          </dl>
+        </li>
+        <li>
+          <p class="fill-when">Evidence. Link it to that preventive control.</p>
+          <dl class="fill-fields">
+            <div><dt>Type</dt><dd>Test report</dd></div>
+            <div><dt>Document reference</dt><dd>P-101 seal leak-test procedure TP-14, rev C</dd></div>
+          </dl>
+          <p>Leave the procedure in the document. The log stores the reference.</p>
+        </li>
+        <li>
+          <p class="fill-when">Mitigative control. Link it to that consequence.</p>
+          <dl class="fill-fields">
+            <div><dt>Description</dt><dd>Pump-house gas detection that isolates the feed on alarm</dd></div>
+            <div><dt>Type</dt><dd>Mitigative</dd></div>
+            <div><dt>Criticality</dt><dd>High</dd></div>
+            <div><dt>Hierarchy level</dt><dd>engineering controls</dd></div>
+          </dl>
+        </li>
+        <li>
+          <p class="fill-when">Action. Raise it on the mitigative control. That evidence is not in the log yet.</p>
+          <dl class="fill-fields">
+            <div><dt>Title</dt><dd>Confirm pump-house gas detection isolates the feed</dd></div>
+            <div><dt>Status</dt><dd>Open</dd></div>
+          </dl>
+        </li>
+        <li>
+          <p class="fill-when">Initial risk. Judge this on the unprotected consequence.</p>
+          <dl class="fill-fields">
+            <div><dt>Kind</dt><dd>Initial (unmitigated)</dd></div>
+            <div><dt>What you judge</dt><dd>A pool of flammable liquid that can ignite</dd></div>
+          </dl>
+        </li>
+        <li>
+          <p class="fill-when">Residual risk. Score this only against the controls you named.</p>
+          <dl class="fill-fields">
+            <div><dt>Kind</dt><dd>Residual (mitigated)</dd></div>
+            <div><dt>Relies on</dt><dd>Both controls above</dd></div>
+            <div><dt>Further action required</dt><dd>Yes, until the gas-detection evidence is in the log</dd></div>
+          </dl>
+        </li>
       </ol>
 
       <h2>Before you stop</h2>
